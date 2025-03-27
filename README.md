@@ -1,3 +1,5 @@
+![Untitled-2025-03-15-2019](https://github.com/user-attachments/assets/2c7ae7d9-d710-46ba-ae02-52367f1601ce)
+
 # Real-Time-Fraud-Detection-System 
 
 "The project is in Progress"
