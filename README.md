@@ -14,7 +14,7 @@ Consistes of :
 
 Phase 2 (Full working project):
 
-For final code files please refer "Final Code Files" folder.
+For final code files please refer "Final Code Files" folder. Also, I wont be using any risk profile concept now.
 
 (*Recommended*) Please go through the Project_Report.pdf file for detailed description of the project.
 
