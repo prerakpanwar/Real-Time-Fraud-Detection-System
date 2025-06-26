@@ -2,7 +2,7 @@
 
 # Real-Time-Fraud-Detection-System 
 
-Tools used: Docker, Kafka, Mysql, Python, Machine Learning, Flask, VsCode, Jupyter labs
+Tools used: Docker, Kafka, Mysql, Python, Machine Learning, XGBoost, Flask, VsCode, Jupyter labs
 
 Phase 1 (Testing basic connections: completed)
 
