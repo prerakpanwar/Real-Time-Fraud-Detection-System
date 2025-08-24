@@ -69,7 +69,7 @@ flowchart TD
 
 1. **User opens Streamlit app** (http://localhost:8501)
 2. **User enters query** in text input field
-3. **User clicks "�� Analyze"** button
+3. **User clicks "Analyze"** button
 4. **Streamlit shows loading spinner** during processing
 5. **Results appear in right column**:
    - Generated SQL (expandable section)
@@ -101,11 +101,11 @@ with col2:
     st.write(result["explanation"])
     
     # Show data table
-    st.subheader("�� Data")
+    st.subheader("Data")
     st.dataframe(result["results"])
     
     # Download button
-    st.download_button("�� Download Results", csv_data)
+    st.download_button("Download Results", csv_data)
 ```
 
 ## Data Flow Architecture
