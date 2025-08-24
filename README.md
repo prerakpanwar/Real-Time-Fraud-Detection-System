@@ -8,33 +8,33 @@ https://github.com/user-attachments/assets/57232af3-cb86-4d8a-ab8a-1954fcf1c116
 
 ```mermaid
 flowchart TD
-    A[User Types Query in Streamlit:<br/>"give me top 10 fraudulent transactions"] --> B[Streamlit Web Interface<br/>rag_chatbot.py<br/>Port: 8501]
+    A["User Types Query in Streamlit: give me top 10 fraudulent transactions"] --> B["Streamlit Web Interface rag_chatbot.py Port: 8501"]
     
-    B --> C[User clicks "🔍 Analyze" button]
-    C --> D[FraudAnalystChatbot.process_query method]
+    B --> C["User clicks 'Analyze' button"]
+    C --> D["FraudAnalystChatbot.process_query method"]
     
-    D --> E[Step 1: Natural Language to SQL<br/>natural_language_to_sql method]
-    E --> F[LangChain LLMChain with Prompt Template]
-    F --> G[OpenAI GPT-3.5-turbo<br/>Temperature: 0.1]
-    G --> H[SQL Generation with Database Schema Context]
-    H --> I[Generated SQL Query:<br/>SELECT trans_num, probability<br/>FROM fraud_predictions<br/>WHERE is_fraud = 1<br/>ORDER BY probability DESC<br/>LIMIT 10]
+    D --> E["Step 1: Natural Language to SQL natural_language_to_sql method"]
+    E --> F["LangChain LLMChain with Prompt Template"]
+    F --> G["OpenAI GPT-3.5-turbo Temperature: 0.1"]
+    G --> H["SQL Generation with Database Schema Context"]
+    H --> I["Generated SQL Query: SELECT trans_num, probability FROM fraud_predictions WHERE is_fraud = 1 ORDER BY probability DESC LIMIT 10"]
     
-    I --> J[Step 2: Database Query Execution<br/>execute_sql_query method]
-    J --> K[MySQL Connector Connection]
-    K --> L[MySQL Database<br/>Container: mysql<br/>Port: 3307<br/>Database: kafka_data]
-    L --> M[fraud_predictions Table]
-    M --> N[Query Results as Pandas DataFrame]
+    I --> J["Step 2: Database Query Execution execute_sql_query method"]
+    J --> K["MySQL Connector Connection"]
+    K --> L["MySQL Database Container: mysql Port: 3307 Database: kafka_data"]
+    L --> M["fraud_predictions Table"]
+    M --> N["Query Results as Pandas DataFrame"]
     
-    N --> O[Step 3: AI Analysis & Explanation<br/>generate_fraud_explanation method]
-    O --> P[LangChain LLMChain with Results]
-    P --> Q[OpenAI GPT-3.5-turbo<br/>Temperature: 0.1]
-    Q --> R[Intelligent Fraud Analysis]
-    R --> S[AI-Generated Explanation:<br/>- Key Findings<br/>- Risk Patterns<br/>- Statistical Insights<br/>- Recommendations]
+    N --> O["Step 3: AI Analysis & Explanation generate_fraud_explanation method"]
+    O --> P["LangChain LLMChain with Results"]
+    P --> Q["OpenAI GPT-3.5-turbo Temperature: 0.1"]
+    Q --> R["Intelligent Fraud Analysis"]
+    R --> S["AI-Generated Explanation: Key Findings, Risk Patterns, Statistical Insights, Recommendations"]
     
-    S --> T[Streamlit Display Components]
-    T --> U[📊 Results Section:<br/>- Generated SQL Query (expandable)<br/>- AI Analysis Text<br/>- Data Table with Results<br/>- Download CSV Button]
+    S --> T["Streamlit Display Components"]
+    T --> U["📊 Results Section: Generated SQL Query expandable, AI Analysis Text, Data Table with Results, Download CSV Button"]
     
-    U --> V[User Sees Complete Answer:<br/>SQL + Analysis + Data]
+    U --> V["User Sees Complete Answer: SQL + Analysis + Data"]
 ```
 
 ## Service Responsibilities
@@ -93,11 +93,11 @@ with col1:
 # Right Column: Results Display
 with col2:
     # Show SQL query (expandable)
-    with st.expander("🔍 Generated SQL Query"):
+    with st.expander("Generated SQL Query"):
         st.code(result["sql_query"], language="sql")
     
     # Show AI analysis
-    st.subheader("📈 Analysis")
+    st.subheader("Analysis")
     st.write(result["explanation"])
     
     # Show data table
@@ -113,21 +113,21 @@ with col2:
 ```mermaid
 flowchart LR
     subgraph "User Interface"
-        A[Streamlit Web App<br/>Port 8501]
+        A["Streamlit Web App Port 8501"]
     end
     
     subgraph "Processing Engine"
-        B[FraudAnalystChatbot<br/>Python Class]
+        B["FraudAnalystChatbot Python Class"]
     end
     
     subgraph "AI Services"
-        C[LangChain Framework]
-        D[OpenAI GPT-3.5-turbo]
+        C["LangChain Framework"]
+        D["OpenAI GPT-3.5-turbo"]
     end
     
     subgraph "Data Layer"
-        E[MySQL Database<br/>Port 3307]
-        F[Pandas DataFrame]
+        E["MySQL Database Port 3307"]
+        F["Pandas DataFrame"]
     end
     
     A --> B
@@ -161,6 +161,8 @@ flowchart LR
 ---
 
 **The system provides enterprise-grade fraud detection capabilities with intelligent natural language querying, making it accessible to both technical and non-technical users.**
+
+---
 
 ### (*Recommended*) Please go through the Project_Report.pdf file for detailed description of the project.(ChatBot functionality not included there; please refer above details to understand ChatBot workflow.)
 
