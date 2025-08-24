@@ -178,7 +178,7 @@ Consistes of :
 
 Phase 2 - Full working project
 
-Phase 3 - Adding ChatBot
+Phase 3 - Adding ChatBot (FULL CODE is here: https://github.com/prerakpanwar/Fraud_Analytics_ChatBot/tree/master)
 
 Feel free to email me for any feedback/doubts :)
 
