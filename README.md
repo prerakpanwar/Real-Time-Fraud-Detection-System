@@ -1,5 +1,7 @@
 ![Untitled-2025-03-15-2019](https://github.com/user-attachments/assets/2c7ae7d9-d710-46ba-ae02-52367f1601ce)
 
+https://github.com/user-attachments/assets/57232af3-cb86-4d8a-ab8a-1954fcf1c116
+
 ### (*Recommended*) Please go through the Project_Report.pdf file for detailed description of the project.
 
 # Real-Time-Fraud-Detection-System 
